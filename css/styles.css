@@ -173,6 +173,143 @@ body {
 }
 
  
+ /* Short Story Container */  
+.short-story {  
+    max-width: 800px;  
+    margin: 0 auto;  
+    padding: 40px;  
+    font-family: "Times New Roman", Times, serif;  
+    line-height: 1.6;  
+    color: #333;  
+    background-color: rgba(255, 255, 255, 0.95);  
+    border-radius: 8px;  
+    transition: all 0.3s ease;  
+ }  
+   
+ /* Hover effect for the entire story container */  
+ .short-story:hover {  
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);  
+    transform: translateY(-2px);  
+ }  
+   
+ /* Epigraph (Quote at the beginning) Styles */  
+ .epigraph {  
+    margin: 40px 0;  
+    padding: 20px;  
+    font-style: italic;  
+    text-align: center;  
+    color: #646F4B; /* Using your theme color */  
+ }  
+   
+ .epigraph p {  
+    margin-bottom: 10px;  
+    line-height: 1.8;  
+ }  
+   
+ .epigraph cite {  
+    display: block;  
+    margin-top: 10px;  
+    font-size: 0.9em;  
+ }  
+   
+ /* Story Title Styles */  
+ .story-title {  
+    text-align: center;  
+    font-size: 28px;  
+    margin: 40px 0;  
+    font-weight: bold;  
+    color: #373F51; /* Using your theme color */  
+    transition: all 0.3s ease;  
+ }  
+   
+ .story-title:hover {  
+    color: #646F4B;  
+    transform: scale(1.02);  
+ }  
+   
+ /* Story Content Styles */  
+ .story-content {  
+    margin-top: 30px;  
+ }  
+   
+ .story-content p {  
+    margin-bottom: 20px;  
+    text-indent: 2em; /* Creates paragraph indentation */  
+    text-align: justify;  
+    transition: all 0.3s ease;  
+ }  
+   
+ /* Special styling for single-line paragraphs (like dialogue) */  
+ .story-content p:only-child,  
+ .story-content p:empty {  
+    text-indent: 0;  
+    text-align: left;  
+ }  
+   
+ /* Hover effect for paragraphs */  
+ .story-content p:hover {  
+    color: #000;  
+    background-color: rgba(100, 111, 75, 0.05);  
+    padding: 5px;  
+    border-radius: 4px;  
+ }  
+   
+ /* Responsive Design */  
+ @media screen and (max-width: 768px) {  
+    .short-story {  
+       padding: 20px;  
+       margin: 10px;  
+       font-size: 16px;  
+    }  
+   
+    .story-title {  
+       font-size: 24px;  
+    }  
+   
+    .epigraph {  
+       margin: 20px 0;  
+       padding: 10px;  
+    }  
+   
+    .story-content p {  
+       text-indent: 1.5em;  
+    }  
+ }  
+   
+ @media screen and (max-width: 480px) {  
+    .short-story {  
+       padding: 15px;  
+       margin: 5px;  
+       font-size: 14px;  
+    }  
+   
+    .story-title {  
+       font-size: 20px;  
+    }  
+   
+    .epigraph {  
+       margin: 15px 0;  
+       padding: 8px;  
+    }  
+   
+    .story-content p {  
+       text-indent: 1em;  
+    }  
+ }  
+   
+ /* Print Styles */  
+ @media print {  
+    .short-story {  
+       max-width: 100%;  
+       padding: 0;  
+       box-shadow: none;  
+       background: none;  
+    }  
+   
+    .story-content p {  
+       page-break-inside: avoid;  
+    }  
+ }
  
    
  /* Footer Styles */  
