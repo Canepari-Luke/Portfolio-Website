@@ -538,6 +538,272 @@ body {
     padding: 5px;  
     border-radius: 4px;  
  }  
+
+ /* Base Styles */  
+.chapter-content {  
+    max-width: 800px;  
+    margin: 0 auto;  
+    padding: 2rem;  
+    background: #1a1a1a;  
+    color: #e0e0e0;  
+    font-family: 'Crimson Text', serif;  
+    line-height: 1.8;  
+    position: relative;  
+ }  
+   
+ /* Chapter Header */  
+ .chapter-header {  
+    text-align: center;  
+    margin-bottom: 4rem;  
+    position: relative;  
+ }  
+   
+ .chapter-header h1 {  
+    font-size: 3rem;  
+    color: #d4af37;  
+    text-transform: uppercase;  
+    letter-spacing: 0.2em;  
+    margin-bottom: 1rem;  
+    text-shadow: 0 0 10px rgba(212, 175, 55, 0.3);  
+ }  
+   
+ .chapter-decoration {  
+    height: 2px;  
+    background: linear-gradient(90deg,  
+       transparent,  
+       #d4af37,  
+       transparent  
+    );  
+    width: 50%;  
+    margin: 0 auto;  
+ }  
+   
+ /* Scene Styling */  
+ .scene {  
+    margin: 2rem 0;  
+    padding: 1.5rem;  
+    border-left: 3px solid transparent;  
+    transition: all 0.3s ease;  
+ }  
+   
+ /* Enhanced Scene Types */  
+ .tension {  
+    border-left-color: #ff4444;  
+    background: linear-gradient(90deg,  
+       rgba(255, 68, 68, 0.1),  
+       transparent  
+    );  
+ }  
+   
+ .chase {  
+    border-left-color: #ff8c00;  
+    background: linear-gradient(90deg,  
+       rgba(255, 140, 0, 0.1),  
+       transparent  
+    );  
+ }  
+   
+ .horror-sequence {  
+    border-left-color: #800000;  
+    background: linear-gradient(90deg,  
+       rgba(128, 0, 0, 0.1),  
+       transparent  
+    );  
+    padding: 2rem;  
+    margin: 2rem 0;  
+ }  
+   
+ /* Dialogue Styling */  
+ .dialogue-sequence {  
+    margin: 1.5rem 0;  
+    padding-left: 2rem;  
+ }  
+   
+ .radio-message {  
+    color: #7fff00;  
+    font-family: 'Courier New', monospace;  
+    padding: 0.5rem;  
+    background: rgba(0, 255, 0, 0.05);  
+    border-left: 3px solid #7fff00;  
+    margin: 1rem 0;  
+ }  
+   
+ .monster-dialogue {  
+    color: #ff4444;  
+    font-style: italic;  
+    font-family: 'Crimson Text', serif;  
+    padding: 1rem;  
+    background: rgba(255, 0, 0, 0.05);  
+    border-left: 3px solid #ff4444;  
+    margin: 1rem 0;  
+    text-shadow: 0 0 5px rgba(255, 0, 0, 0.3);  
+ }  
+   
+ /* Action Sequences */  
+ .action-sequence {  
+    padding: 1.5rem;  
+    border-left: 3px solid #ffd700;  
+    background: linear-gradient(90deg,  
+       rgba(255, 215, 0, 0.1),  
+       transparent  
+    );  
+    margin: 2rem 0;  
+ }  
+   
+ /* Combat Scenes */  
+ .combat {  
+    border-left: 5px solid #ff4444;  
+    padding: 2rem;  
+    background: linear-gradient(90deg,  
+       rgba(255, 68, 68, 0.15),  
+       transparent  
+    );  
+    margin: 2.5rem 0;  
+ }  
+   
+ /* Emotional Moments */  
+ .reflection {  
+    font-style: italic;  
+    color: #b0c4de;  
+    padding: 2rem;  
+    background: rgba(176, 196, 222, 0.05);  
+    border-left: 3px solid #b0c4de;  
+    margin: 2rem 0;  
+ }  
+   
+ /* Technical Details */  
+ .technical-detail {  
+    font-family: 'Courier New', monospace;  
+    color: #00ff00;  
+    padding: 1.5rem;  
+    background: rgba(0, 255, 0, 0.05);  
+    border-left: 3px solid #00ff00;  
+    margin: 1.5rem 0;  
+ }  
+   
+ /* Monster Descriptions */  
+ .creature-description {  
+    color: #ff6b6b;  
+    padding: 1.5rem;  
+    background: rgba(255, 107, 107, 0.05);  
+    border-left: 3px solid #ff6b6b;  
+    margin: 1.5rem 0;  
+ }  
+   
+ /* Climactic Moments */  
+ .climax {  
+    border-left: 5px solid #ff0000;  
+    padding: 2rem;  
+    background: linear-gradient(90deg,  
+       rgba(255, 0, 0, 0.2),  
+       transparent  
+    );  
+    margin: 3rem 0;  
+    font-size: 1.1em;  
+ }  
+   
+ /* Inner Thoughts */  
+ .inner-thought {  
+    font-style: italic;  
+    color: #b0c4de;  
+    padding-left: 1rem;  
+    border-left: 2px solid #b0c4de;  
+ }  
+   
+ /* Special Effects */  
+ .scene.night {  
+    background: linear-gradient(90deg,  
+       rgba(0, 0, 50, 0.2),  
+       transparent  
+    );  
+    color: #b0c4de;  
+ }  
+   
+ .scene.final-horror {  
+    background: linear-gradient(90deg,  
+       rgba(128, 0, 0, 0.2),  
+       transparent  
+    );  
+    padding: 2rem;  
+    border-left: 5px solid #800000;  
+ }  
+   
+ /* Animation Effects */  
+ @keyframes pulse {  
+    0% { opacity: 1; }  
+    50% { opacity: 0.7; }  
+    100% { opacity: 1; }  
+ }  
+   
+ .creature-speech {  
+    animation: pulse 2s infinite;  
+    color: #ff4444;  
+    font-style: italic;  
+    margin: 1rem 0;  
+ }  
+   
+ /* Enhanced Typography */  
+ .final-thought {  
+    font-size: 1.2em;  
+    color: #ff6b6b;  
+    text-align: center;  
+    font-style: italic;  
+    margin: 2rem 0;  
+ }  
+   
+ /* Scene Transitions */  
+ .scene {  
+    position: relative;  
+    overflow: hidden;  
+ }  
+   
+ .scene::after {  
+    content: '';  
+    position: absolute;  
+    top: 0;  
+    left: 0;  
+    width: 100%;  
+    height: 100%;  
+    background: linear-gradient(90deg,  
+       transparent,  
+       rgba(255, 255, 255, 0.1),  
+       transparent  
+    );  
+    transform: translateX(-100%);  
+    transition: transform 0.5s ease;  
+ }  
+   
+ .scene:hover::after {  
+    transform: translateX(100%);  
+ }  
+   
+ /* Responsive Design */  
+ @media (max-width: 768px) {  
+    .chapter-content {  
+       padding: 1rem;  
+    }  
+   
+    .chapter-header h1 {  
+       font-size: 2rem;  
+    }  
+   
+    .scene {  
+       padding: 1rem;  
+    }  
+ }  
+   
+ /* Print Styles */  
+ @media print {  
+    .chapter-content {  
+       background: white;  
+       color: black;  
+    }  
+   
+    .scene::after {  
+       display: none;  
+    }  
+ }
+ 
    
  /* Responsive Design */  
  @media screen and (max-width: 768px) {  
