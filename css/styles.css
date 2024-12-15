@@ -311,6 +311,242 @@ body {
     }  
  }
  
+ /* Resume Styles */  
+#resume {  
+    max-width: 1000px;  
+    margin: 0 auto;  
+    padding: 40px;  
+    background-color: #fff;  
+    box-shadow: 0 0 20px rgba(0,0,0,0.1);  
+    border-radius: 8px;  
+    transition: all 0.3s ease;  
+ }  
+   
+ #resume:hover {  
+    box-shadow: 0 0 30px rgba(100, 111, 75, 0.2);  
+    transform: translateY(-5px);  
+ }  
+   
+ /* Resume Header */  
+ .resume-header {  
+    text-align: center;  
+    margin-bottom: 40px;  
+    padding-bottom: 20px;  
+    border-bottom: 2px solid #646F4B;  
+ }  
+   
+ .resume-header h2 {  
+    font-size: 2.5em;  
+    color: #373F51;  
+    margin-bottom: 15px;  
+    transition: all 0.3s ease;  
+ }  
+   
+ .resume-header h2:hover {  
+    color: #646F4B;  
+    transform: scale(1.02);  
+ }  
+   
+ .contact-info {  
+    color: #666;  
+    line-height: 1.6;  
+ }  
+   
+ .contact-info a {  
+    color: #646F4B;  
+    text-decoration: none;  
+    transition: all 0.3s ease;  
+ }  
+   
+ .contact-info a:hover {  
+    color: #373F51;  
+    text-decoration: underline;  
+ }  
+   
+ /* Section Styles */  
+ #resume h3 {  
+    color: #373F51;  
+    font-size: 1.8em;  
+    margin: 30px 0 20px;  
+    padding-bottom: 10px;  
+    border-bottom: 1px solid #ddd;  
+    transition: all 0.3s ease;  
+ }  
+   
+ #resume h3:hover {  
+    color: #646F4B;  
+    border-bottom-color: #646F4B;  
+    padding-left: 10px;  
+ }  
+   
+ /* Education Section */  
+ .education-item {  
+    margin-bottom: 30px;  
+    padding: 20px;  
+    border-radius: 8px;  
+    transition: all 0.3s ease;  
+ }  
+   
+ .education-item:hover {  
+    background-color: rgba(100, 111, 75, 0.05);  
+ }  
+   
+ .education-item h4 {  
+    color: #373F51;  
+    font-size: 1.4em;  
+    margin-bottom: 10px;  
+ }  
+   
+ .education-item .degree,  
+ .education-item .minor {  
+    color: #646F4B;  
+    font-weight: 500;  
+    margin: 5px 0;  
+ }  
+   
+ .education-item .location,  
+ .education-item .graduation {  
+    color: #666;  
+    font-style: italic;  
+ }  
+   
+ /* Experience Section */  
+ .experience-item {  
+    margin-bottom: 30px;  
+    padding: 20px;  
+    border-radius: 8px;  
+    transition: all 0.3s ease;  
+ }  
+   
+ .experience-item:hover {  
+    background-color: rgba(100, 111, 75, 0.05);  
+    transform: translateX(10px);  
+ }  
+   
+ .experience-item h4 {  
+    color: #373F51;  
+    font-size: 1.3em;  
+    margin-bottom: 10px;  
+ }  
+   
+ .job-info {  
+    color: #646F4B;  
+    font-style: italic;  
+    margin-bottom: 15px;  
+ }  
+   
+ /* List Styles */  
+ #resume ul {  
+    list-style-type: none;  
+    padding-left: 20px;  
+ }  
+   
+ #resume ul li {  
+    margin-bottom: 10px;  
+    position: relative;  
+    padding-left: 20px;  
+    line-height: 1.6;  
+    transition: all 0.3s ease;  
+ }  
+   
+ #resume ul li::before {  
+    content: "•";  
+    color: #646F4B;  
+    position: absolute;  
+    left: 0;  
+    transition: all 0.3s ease;  
+ }  
+   
+ #resume ul li:hover {  
+    color: #373F51;  
+    transform: translateX(5px);  
+ }  
+   
+ #resume ul li:hover::before {  
+    color: #373F51;  
+    transform: scale(1.2);  
+ }  
+   
+ /* Skills & Projects Section */  
+ #skills-projects ul {  
+    display: grid;  
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));  
+    gap: 15px;  
+    padding: 20px;  
+ }  
+   
+ #skills-projects ul li {  
+    background-color: rgba(100, 111, 75, 0.05);  
+    padding: 15px;  
+    border-radius: 6px;  
+    transition: all 0.3s ease;  
+ }  
+   
+ #skills-projects ul li:hover {  
+    background-color: rgba(100, 111, 75, 0.1);  
+    transform: translateY(-3px);  
+    box-shadow: 0 3px 10px rgba(0,0,0,0.1);  
+ }  
+   
+ /* Responsive Design */  
+ @media screen and (max-width: 768px) {  
+    #resume {  
+       padding: 20px;  
+    }  
+   
+    .resume-header h2 {  
+       font-size: 2em;  
+    }  
+   
+    #skills-projects ul {  
+       grid-template-columns: 1fr;  
+    }  
+   
+    .experience-item,  
+    .education-item {  
+       padding: 15px;  
+    }  
+ }  
+   
+ @media screen and (max-width: 480px) {  
+    #resume {  
+       padding: 15px;  
+    }  
+   
+    .resume-header h2 {  
+       font-size: 1.8em;  
+    }  
+   
+    #resume h3 {  
+       font-size: 1.5em;  
+    }  
+   
+    .experience-item h4,  
+    .education-item h4 {  
+       font-size: 1.2em;  
+    }  
+ }  
+   
+ /* Print Styles */  
+ @media print {  
+    #resume {  
+       box-shadow: none;  
+       padding: 0;  
+    }  
+   
+    .experience-item:hover,  
+    .education-item:hover,  
+    #skills-projects ul li:hover {  
+       transform: none;  
+       background-color: transparent;  
+       box-shadow: none;  
+    }  
+   
+    #resume ul li::before {  
+       color: #000;  
+    }  
+ }
+ 
    
  /* Footer Styles */  
    
