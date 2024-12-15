@@ -42,34 +42,25 @@ const projectContainer = document.querySelector('.project-container');
 let currentIndex = 0; // Tracks the first visible project
 const projectWidth = 300 + 20; // Adjust for the width and margin of each project
 
-// Function to update the slider position
-function updateSlider() {
-    projectContainer.style.transform = `translateX(${-currentIndex * projectWidth}px)`;
+let slideIndex = 0;
+const slides = document.querySelectorAll(".slide");
+const prev = document.querySelector(".prev");
+const next = document.querySelector(".next");
+
+function showSlide(index) {
+    slides.forEach((slide, i) => {
+        slide.classList.toggle("active", i === index);
+    });
 }
 
-rightBtn.addEventListener('click', () => {
-    currentIndex = (currentIndex + 1) % projectContainer.children.length;
-    updateSlider();
-});
+function changeSlide(step) {
+    slideIndex = (slideIndex + step + slides.length) % slides.length;
+    showSlide(slideIndex);
+}
 
-leftBtn.addEventListener('click', () => {
-    currentIndex = (currentIndex - 1 + projectContainer.children.length) % projectContainer.children.length;
-    updateSlider();
-});
+// Initial display
+showSlide(slideIndex);
 
-
-// Slide left
-leftBtn.addEventListener('click', () => {
-    if (currentIndex > 0) {
-        currentIndex--;
-        updateSlider();
-    }
-});
-
-// Slide right
-rightBtn.addEventListener('click', () => {
-    if (currentIndex < projectContainer.children.length - 1) {
-        currentIndex++;
-        updateSlider();
-    }
-});
+// Button Events
+prev.addEventListener("click", () => changeSlide(-1));
+next.addEventListener("click", () => changeSlide(1));

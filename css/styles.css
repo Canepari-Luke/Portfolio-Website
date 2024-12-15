@@ -123,56 +123,81 @@ footer {
     margin-top: 20px;
 }
 
-.project-slider {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    position: relative;
-    overflow: hidden; /* Ensures only the visible section is shown */
-    width: 80%; /* Adjust based on design */
-    margin: auto;
-}
-
-.project-container {
-    display: flex;
-    transition: transform 0.5s ease-in-out; /* Smooth sliding animation */
-    width: fit-content;
-}
-
-.project {
-    min-width: 300px; /* Each project occupies a specific width */
-    margin: 0 10px; /* Adjust spacing between projects */
+body {
+    font-family: Helvetica, sans-serif;
+    padding: 5%;
     text-align: center;
-    background-color: #f4f4f4;
-    border: 1px solid #ddd;
-    border-radius: 8px;
-    padding: 20px;
-    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
+    font-size: 50;
 }
 
-.slide-btn {
-    background-color: #646F4B;
-    color: white;
-    border: none;
-    padding: 10px 20px;
-    cursor: pointer;
-    border-radius: 5px;
-    position: absolute;
-    z-index: 10;
+/* Styling the area of the slides */
+#slideshow {
+    overflow: hidden;
+    height: 510px;
+    width: 728px;
+    margin: 0 auto;
 }
 
-.left-btn {
-    left: 10px;
+/* Style each of the sides 
+  with a fixed width and height */
+.slide {
+    float: left;
+    height: 510px;
+    width: 728px;
 }
 
-.right-btn {
-    right: 10px;
+/* Add animation to the slides */
+.slide-wrapper {
+
+    /* Calculate the total width on the
+    basis of number of slides */
+    width: calc(728px * 4);
+
+    /* Specify the animation with the
+    duration and speed */
+    animation: slide 30s ease infinite;
 }
 
-.slide-btn:hover {
-    background-color: #D0CD94;
+/* Set the background color
+  of each of the slides */
+.slide:nth-child(1) {
+    background: rgb(255, 255, 255);
 }
 
+.slide:nth-child(2) {
+    background: rgb(255, 255, 255);
+}
+
+.slide:nth-child(3) {
+    background: rgb(255, 255, 255);
+}
+
+.slide:nth-child(4) {
+    background: rgb(255, 255, 255);
+}
+
+/* Define the animation 
+  for the slideshow */
+@keyframes slide {
+
+    /* Calculate the margin-left for 
+    each of the slides */
+    20% {
+        margin-left: 0px;
+    }
+
+    40% {
+        margin-left: calc(-728px * 1);
+    }
+
+    60% {
+        margin-left: calc(-728px * 2);
+    }
+
+    80% {
+        margin-left: calc(-728px * 3);
+    }
+}
 
 @media screen and (max-width: 768px) {
     .grid-container {
