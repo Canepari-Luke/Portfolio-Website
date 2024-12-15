@@ -172,6 +172,291 @@ body {
    right: 0; /* Adjust position */  
 }
 
+/* Enhanced Interactive Effects */  
+  
+/* Glowing Text Effect */  
+@keyframes textGlow {  
+    0%, 100% { text-shadow: 0 0 10px rgba(74, 158, 255, 0.5); }  
+    50% { text-shadow: 0 0 20px rgba(74, 158, 255, 0.8); }  
+ }  
+   
+ /* Scanner Line Effect */  
+ @keyframes scanline {  
+    0% { transform: translateY(-100%); }  
+    100% { transform: translateY(100%); }  
+ }  
+   
+ /* Data Stream Effect */  
+ @keyframes dataStream {  
+    0% { background-position: 0% 0%; }  
+    100% { background-position: 0% 100%; }  
+ }  
+   
+ /* Holographic Flicker */  
+ @keyframes holoFlicker {  
+    0%, 100% { opacity: 1; }  
+    50% { opacity: 0.97; }  
+    25%, 75% { opacity: 0.95; }  
+ }  
+   
+ /* Enhanced Manual Container */  
+ .game-manual {  
+    /* Previous styles remain */  
+    position: relative;  
+    overflow: hidden;  
+ }  
+   
+ .game-manual::before {  
+    content: '';  
+    position: absolute;  
+    top: 0;  
+    left: 0;  
+    right: 0;  
+    height: 100%;  
+    background: linear-gradient(transparent, rgba(74, 158, 255, 0.1));  
+    pointer-events: none;  
+    animation: scanline 8s linear infinite;  
+    opacity: 0.5;  
+ }  
+   
+ /* Enhanced Header */  
+ .manual-header h1 {  
+    /* Previous styles remain */  
+    animation: textGlow 3s ease-in-out infinite;  
+    position: relative;  
+ }  
+   
+ .manual-header h1::before {  
+    content: attr(data-text);  
+    position: absolute;  
+    left: -2px;  
+    text-shadow: 2px 0 #ff0000;  
+    background: transparent;  
+    overflow: hidden;  
+    animation: holoFlicker 3s infinite;  
+ }  
+   
+ /* Interactive Sections */  
+ section {  
+    /* Previous styles remain */  
+    position: relative;  
+    overflow: hidden;  
+ }  
+   
+ section::after {  
+    content: '';  
+    position: absolute;  
+    top: 0;  
+    left: 0;  
+    width: 100%;  
+    height: 100%;  
+    background: linear-gradient(  
+       45deg,  
+       transparent 0%,  
+       rgba(74, 158, 255, 0.1) 50%,  
+       transparent 100%  
+    );  
+    transform: translateX(-100%);  
+    transition: transform 0.6s ease;  
+ }  
+   
+ section:hover::after {  
+    transform: translateX(100%);  
+ }  
+   
+ /* Enhanced Crew Members */  
+ .crew-member {  
+    /* Previous styles remain */  
+    position: relative;  
+    cursor: pointer;  
+ }  
+   
+ .crew-member::before {  
+    content: '';  
+    position: absolute;  
+    top: -2px;  
+    left: -2px;  
+    right: -2px;  
+    bottom: -2px;  
+    background: linear-gradient(45deg, #4a9eff, transparent);  
+    z-index: -1;  
+    opacity: 0;  
+    transition: opacity 0.3s ease;  
+    border-radius: 10px;  
+ }  
+   
+ .crew-member:hover::before {  
+    opacity: 1;  
+ }  
+   
+ /* AI Section Special Effects */  
+ .crew-member.ai {  
+    /* Previous styles remain */  
+    background: rgba(255, 0, 0, 0.05);  
+    position: relative;  
+ }  
+   
+ .crew-member.ai::after {  
+    content: '';  
+    position: absolute;  
+    top: 0;  
+    left: 0;  
+    width: 100%;  
+    height: 100%;  
+    background: repeating-linear-gradient(  
+       0deg,  
+       transparent,  
+       transparent 2px,  
+       rgba(255, 0, 0, 0.1) 3px,  
+       rgba(255, 0, 0, 0.1) 3px  
+    );  
+    pointer-events: none;  
+    animation: dataStream 20s linear infinite;  
+ }  
+   
+ /* Feature Items Enhancement */  
+ .feature-item {  
+    /* Previous styles remain */  
+    position: relative;  
+    transition: all 0.3s ease;  
+ }  
+   
+ .feature-item:hover {  
+    transform: translateY(-5px) scale(1.02);  
+    box-shadow: 0 10px 20px rgba(74, 158, 255, 0.2);  
+ }  
+   
+ /* Interactive Tips */  
+ .tip {  
+    /* Previous styles remain */  
+    position: relative;  
+    overflow: hidden;  
+ }  
+   
+ .tip::before {  
+    content: '>';  
+    position: absolute;  
+    left: -20px;  
+    color: #4a9eff;  
+    transition: transform 0.3s ease;  
+ }  
+   
+ .tip:hover::before {  
+    transform: translateX(25px);  
+ }  
+   
+ /* Enhanced Text Selection */  
+ ::selection {  
+    background: rgba(74, 158, 255, 0.3);  
+    color: #fff;  
+    text-shadow: 0 0 8px rgba(74, 158, 255, 0.8);  
+ }  
+   
+ /* Interactive Images */  
+ .ship-image {  
+    position: relative;  
+    overflow: hidden;  
+    border-radius: 8px;  
+ }  
+   
+ .ship-image::after {  
+    content: '';  
+    position: absolute;  
+    top: 0;  
+    left: 0;  
+    width: 100%;  
+    height: 100%;  
+    background: linear-gradient(  
+       45deg,  
+       transparent,  
+       rgba(74, 158, 255, 0.2),  
+       transparent  
+    );  
+    transform: translateX(-100%);  
+    transition: transform 0.6s ease;  
+ }  
+   
+ .ship-image:hover::after {  
+    transform: translateX(100%);  
+ }  
+   
+ /* Footer Enhancement */  
+ .manual-footer {  
+    /* Previous styles remain */  
+    position: relative;  
+ }  
+   
+ .manual-footer::before {  
+    content: '';  
+    position: absolute;  
+    top: 0;  
+    left: 25%;  
+    width: 50%;  
+    height: 1px;  
+    background: linear-gradient(  
+       90deg,  
+       transparent,  
+       #4a9eff,  
+       transparent  
+    );  
+ }  
+   
+ /* Loading State */  
+ .loading {  
+    position: relative;  
+ }  
+   
+ .loading::after {  
+    content: '';  
+    position: absolute;  
+    top: 0;  
+    left: 0;  
+    width: 100%;  
+    height: 2px;  
+    background: #4a9eff;  
+    animation: loading 2s ease-in-out infinite;  
+ }  
+   
+ @keyframes loading {  
+    0% { width: 0; left: 0; }  
+    50% { width: 100%; left: 0; }  
+    100% { width: 0; left: 100%; }  
+ }  
+   
+ /* Hover Cards */  
+ .feature-card {  
+    transform-style: preserve-3d;  
+    transition: transform 0.5s ease;  
+ }  
+   
+ .feature-card:hover {  
+    transform: rotateX(10deg) rotateY(10deg);  
+ }  
+   
+ /* Interactive Links */  
+ .manual-link {  
+    position: relative;  
+    color: #4a9eff;  
+    text-decoration: none;  
+    transition: all 0.3s ease;  
+ }  
+   
+ .manual-link::after {  
+    content: '';  
+    position: absolute;  
+    bottom: -2px;  
+    left: 0;  
+    width: 100%;  
+    height: 1px;  
+    background: #4a9eff;  
+    transform: scaleX(0);  
+    transition: transform 0.3s ease;  
+ }  
+   
+ .manual-link:hover::after {  
+    transform: scaleX(1);  
+ }
+ 
  
  /* Short Story Container */  
 .short-story {  
