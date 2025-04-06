@@ -934,7 +934,47 @@ body {
  .contact-info a:hover {  
     color: #373F51;  
     text-decoration: underline;  
- }  
+ }
+ 
+ /* General styles for the social links section */
+#social-media {
+   text-align: center;
+   margin: 20px;
+}
+
+.social-link {
+   margin-bottom: 30px;
+   display: block; /* Stack the social link items vertically */
+   text-align: center;
+}
+
+/* Styling for the logos to adjust size */
+.social-link img {
+   width: 40px; /* Adjust this to your preference */
+   height: auto; /* Maintain aspect ratio */
+   margin-top: 10px; /* Adds space between the text and the logo */
+}
+
+/* Link styling */
+.social-link a {
+   display: inline-block;
+   margin-top: 10px;
+   font-size: 16px;
+   text-decoration: none;
+   color: #0077b5; /* LinkedIn default color */
+}
+
+.social-link a:hover {
+   color: #005a8c; /* Darker LinkedIn color on hover */
+}
+
+/* Optional: Add styling for the GitHub link to differentiate it */
+.social-link img[src*="github"] {
+   width: 40px; /* Same size as LinkedIn logo */
+   height: auto;
+}
+
+
    
  /* Section Styles */  
  #resume h3 {  
