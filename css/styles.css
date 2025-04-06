@@ -73,11 +73,21 @@ body {
     .search-bar {
         margin: 10px 0; /* Adjust spacing for smaller screens */
     }
+
+    .grid-container {
+      grid-template-areas: 
+          "main"
+          "left"
+          "right";
+      grid-template-columns: 1fr;
+  }
 }
 
 /* General styles for the grid */
 .grid-container {
     display: grid;
+    grid-template-areas: 
+        "left main right";
     grid-template-columns: 1fr 2fr 1fr; /* Left, Center (Main Content), Right */
     gap: 20px;
     padding: 20px;
@@ -92,6 +102,18 @@ body {
     border-radius: 8px; /* Rounded corners */
     padding: 20px;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.left-box {
+   grid-area: left;
+}
+
+.main-content {
+   grid-area: main;
+}
+
+.right-box {
+   grid-area: right;
 }
 
 /* Specific grid items */
